@@ -1,0 +1,26 @@
+{
+  "name": "@devbit/trex-controller",
+  "version": "0.0.1",
+  "description": "Library for controlling the TRex motor controller of the Thumper platform",
+  "main": "src/trex-controller.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "type": "module",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/BioBoost/trex-controller.git"
+  },
+  "keywords": [
+    "trex",
+    "dagu",
+    "thumper",
+    "vives"
+  ],
+  "author": "Nico De Witte",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/BioBoost/trex-controller/issues"
+  },
+  "homepage": "https://github.com/BioBoost/trex-controller#readme"
+}
