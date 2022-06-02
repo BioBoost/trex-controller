@@ -20,7 +20,9 @@
     "thumper",
     "vives"
   ],
-  "files": ["lib/**/*"],
+  "files": [
+    "lib/**/*"
+  ],
   "author": "Nico De Witte",
   "license": "MIT",
   "bugs": {
@@ -28,6 +30,7 @@
   },
   "homepage": "https://github.com/BioBoost/trex-controller#readme",
   "devDependencies": {
+    "@types/node": "^17.0.38",
     "prettier": "^2.6.2",
     "tslint": "^6.1.3",
     "tslint-config-prettier": "^1.18.0",

@@ -10,18 +10,17 @@ This package is meant to be used with the new TRex `thumper-v4` firmware which c
 
 ```js
 import { TRexController } from '@thumper/trex-controller';
+import rpio from 'rpio';
 
-class FakeI2cDevice {
-  write(values: number[], callback: (err: any) => void) { }
-  read(length: number, callback: (err: any, res: number[]) => void) { }
-}
+rpio.i2cBegin();
+rpio.i2cSetSlaveAddress(0x07);
+rpio.i2cSetBaudRate(100000);
 
-let controller = new TRexController(new FakeI2cDevice());
+let controller = new TRexController(rpio);
 
-controller.battery()
-.then((result) => {
-  console.log(result)
-})
+console.log(controller.battery());
+
+rpio.i2cEnd();
 ```
 
 ## Dependencies
