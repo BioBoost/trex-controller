@@ -104,4 +104,10 @@ process.once('SIGTERM', async () => {
 
 ## Dependencies
 
-TODO
+Tried following packages with RPi4 64 bit:
+
+* `rpio`: Read works like a charm, write messes up the i2c bus
+* `@abandonware/i2c`: Segmentation fault
+* `array-gpio`: mmap error: Operation not permitted, The kernel parameter iomem=relaxed disables the address checking. Adding it to the cmdline.txt - TRIED - DOESNT SEEM TO WORK
+
+For the moment the only library working was `i2c-bus`.
