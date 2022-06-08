@@ -1,7 +1,8 @@
-// Declare what functionality we expect I2cDevice to provide
-declare class I2cDevice {
-  i2cRead(buffer: Buffer, length?: number): any;
-  i2cWrite(buffer: Buffer, length?: number): any;
-}
+export type BytesWritten = { bytesWritten: number; buffer: Buffer };
+export type BytesRead = { bytesRead: number; buffer: Buffer };
 
-export { I2cDevice }
+// Declare what functionality we expect I2cDevice to provide
+export declare class I2cDevice {
+  read(buffer: Buffer, length: number): Promise<BytesRead>;
+  write(buffer: Buffer, length: number): Promise<BytesWritten>;
+}
